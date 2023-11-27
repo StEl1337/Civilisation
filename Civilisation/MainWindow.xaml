@@ -1,0 +1,18 @@
+﻿<Window x:Class="Civilisation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Civilisation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Width="1280" Height="713">
+        <Button x:Name="GenerateMapButton" Content="Generate map" HorizontalAlignment="Left" Margin="31,123,0,0" VerticalAlignment="Top" Click="GenerateMapButton_Click"/>
+        <TextBox x:Name="MapWidthTextBox" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Map width (max 1100)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="MapHeightTextBox" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Map height (max 600)" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="MapImage" HorizontalAlignment="Left" Height="600" Margin="146,36,0,0" VerticalAlignment="Top" Width="1100"/>
+
+    </Grid>
+</Window>
