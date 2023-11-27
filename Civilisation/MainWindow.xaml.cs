@@ -241,10 +241,19 @@ namespace Civilisation
 
         private int GetDistance(MapSquare a, MapSquare b)
         {
+            int cost = 0;
+
             if (a.Terrain == TerrainType.Water || b.Terrain == TerrainType.Water)
                 return int.MaxValue;
-            // Manhattan distance
-            return Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
+
+            cost += Math.Abs(a.X - b.X);
+
+            cost += Math.Abs(a.Y - b.Y);
+
+            cost *= a.MoveCost;
+            cost *= b.MoveCost;
+
+            return cost;
         }
 
         private MapSquare GetLowestFScore(List<MapSquare> openSet, Dictionary<MapSquare, int> fScore)
