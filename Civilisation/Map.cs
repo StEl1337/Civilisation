@@ -1,5 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Drawing;
+using WpfColor = System.Windows.Media.Color;
+using System.Windows.Input;
+using System.Runtime.CompilerServices;
+using Point = System.Windows.Point;
+using System.Collections;
 
 namespace Civilisation
 {
@@ -54,6 +64,13 @@ namespace Civilisation
             if (y < Height - 1 && Squares[sq.X, sq.Y + 1].Terrain != TerrainType.Water) neighbors.Add(Squares[x, y + 1]);
 
             return neighbors;
+        }
+
+        public MapSquare GetSquareAt(Point position)
+        {
+            int x = (int)position.X;
+            int y = (int)position.Y;
+            return Squares[x, y];
         }
     }
 }
