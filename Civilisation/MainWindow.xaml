@@ -9,9 +9,9 @@
     <Grid Width="1280" Height="713">
         <Button x:Name="GenerateMapButton" Content="Generate map" HorizontalAlignment="Left" Margin="31,123,0,0" VerticalAlignment="Top" Click="GenerateMapButton_Click"/>
         <TextBox x:Name="MapWidthTextBox" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Map width (max 1100)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="Map width (max 110)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="MapHeightTextBox" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Map height (max 600)" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Map height (max 60)" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
         <Image x:Name="MapImage" HorizontalAlignment="Left" Height="600" Margin="146,36,0,0" VerticalAlignment="Top" Width="1100"/>
         <Button x:Name="ShowRouteButton" Content="Show route" HorizontalAlignment="Left" Margin="31,171,0,0" VerticalAlignment="Top" Width="79" Click="ShowRouteButton_Click"/>
         <Label Content="Min time for route" HorizontalAlignment="Left" Margin="20,208,0,0" VerticalAlignment="Top"/>

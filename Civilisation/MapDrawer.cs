@@ -92,6 +92,7 @@ namespace Civilisation
         {
             int cellSize = CalculateCellSize();
             var source = mapImage.Source as WriteableBitmap;
+
             if (!IsWater(position) && !IsCharacter(position))
             {
                 if (previousCityPosition.HasValue)
@@ -172,5 +173,4 @@ namespace Civilisation
             return new Point(x, y);
         }
     }
-
 }
