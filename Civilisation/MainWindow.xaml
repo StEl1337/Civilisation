@@ -6,16 +6,30 @@
         xmlns:local="clr-namespace:Civilisation"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
-    <Grid Width="1280" Height="713">
-        <Button x:Name="GenerateMapButton" Content="Generate map" HorizontalAlignment="Left" Margin="31,123,0,0" VerticalAlignment="Top" Click="GenerateMapButton_Click"/>
-        <TextBox x:Name="MapWidthTextBox" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Map width (max 110)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="MapHeightTextBox" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Map height (max 60)" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="MapImage" HorizontalAlignment="Left" Height="600" Margin="146,36,0,0" VerticalAlignment="Top" Width="1100"/>
-        <Button x:Name="ShowRouteButton" Content="Show route" HorizontalAlignment="Left" Margin="31,171,0,0" VerticalAlignment="Top" Width="79" Click="ShowRouteButton_Click"/>
-        <Label Content="Min time for route" HorizontalAlignment="Left" Margin="20,208,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Time" Content="" HorizontalAlignment="Left" Margin="54,239,0,0" VerticalAlignment="Top" FontWeight="UltraBlack" Foreground="Red"/>
+    <Grid Width="1280" Height="713" Background="#FFFFFAF6">
+        <Button x:Name="GenerateMapButton" Content="Generate map" HorizontalAlignment="Left" Margin="31,123,0,0" VerticalAlignment="Top" Click="GenerateMapButton_Click" Height="20" Width="79"/>
+        <TextBox x:Name="MapWidthTextBox" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Background="#FFFFFAF6"/>
+        <Label Content="Map width (max 110)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="26" Width="122"/>
+        <TextBox x:Name="MapHeightTextBox" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Background="#FFFFFAF6"/>
+        <Label Content="Map height (max 60)" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="26" Width="120"/>
+        <Image x:Name="MapImage" HorizontalAlignment="Left" Height="600" Margin="146,36,0,0" VerticalAlignment="Top" Width="1100" Grid.RowSpan="2"/>
+        <Button x:Name="ShowRouteButton" Content="Show route" HorizontalAlignment="Left" Margin="31,171,0,0" VerticalAlignment="Top" Width="79" Click="ShowRouteButton_Click" Height="20"/>
+        <Label x:Name="Time" Content="" HorizontalAlignment="Left" Margin="54,239,0,0" VerticalAlignment="Top" FontWeight="UltraBlack" Foreground="Red" Height="26" Width="10"/>
+        <Label Content="Map legend" HorizontalAlignment="Left" Margin="32,202,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="77"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,240,0,0" VerticalAlignment="Top" Width="15" Fill="Green"/>
+        <Label Content="Field" HorizontalAlignment="Left" Margin="37,235,0,0" VerticalAlignment="Top" Height="26" Width="35"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,265,0,0" VerticalAlignment="Top" Width="15" Fill="DarkGreen"/>
+        <Label Content="Forest" HorizontalAlignment="Left" Margin="37,261,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,321,0,0" VerticalAlignment="Top" Width="15" Fill="Red"/>
+        <Label Content="Character" HorizontalAlignment="Left" Margin="37,315,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,346,0,0" VerticalAlignment="Top" Width="15" Fill="Yellow"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="37,341,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,372,0,0" VerticalAlignment="Top" Width="15" Fill="Orange"/>
+        <Label Content="Route on field" HorizontalAlignment="Left" Margin="37,367,0,0" VerticalAlignment="Top" Height="26" Width="84"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,398,0,0" VerticalAlignment="Top" Width="15" Fill="Brown"/>
+        <Label Content="Route on forest" HorizontalAlignment="Left" Margin="37,393,0,0" VerticalAlignment="Top" Height="26" Width="92"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="17,293,0,0" VerticalAlignment="Top" Width="15" Fill="Blue"/>
+        <Label Content="Water" HorizontalAlignment="Left" Margin="37,287,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
 
     </Grid>
 </Window>

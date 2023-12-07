@@ -21,6 +21,7 @@ namespace Civilisation
         private City city;
         private Point? previousCharacterPosition = null; 
         private Point? previousCityPosition = null;
+        private List<MapSquare> previousRoute = new List<MapSquare>();
 
         public MapDrawer(Map map, Image mapImage, Character character, City city)
         {
@@ -130,18 +131,34 @@ namespace Civilisation
 
         public void DrawRoute(List<MapSquare> route)
         {
+            ClearPreviousRoute();
             int cellSize = CalculateCellSize();
             var source = mapImage.Source as WriteableBitmap;
             int time = 0;
 
             foreach (MapSquare sq in route)
             {
-                WpfColor color = sq.Terrain == TerrainType.Forest ? Colors.DarkOrange : Colors.Orange;
+                WpfColor color = sq.Terrain == TerrainType.Forest ? Colors.Brown : Colors.Orange;
                 time += sq.MoveCost;
                 DrawCell(source, sq.X, sq.Y, cellSize, color);
             }
 
+            previousRoute = new List<MapSquare>(route);
             MessageBox.Show("Time: " + time);
+        }
+
+        private void ClearPreviousRoute()
+        {
+            if (previousRoute.Count > 0)
+            {
+                var source = mapImage.Source as WriteableBitmap;
+                int cellSize = CalculateCellSize();
+
+                foreach (MapSquare sq in previousRoute)
+                {
+                    DrawCell(source, sq.X, sq.Y, cellSize, DetermineColor(sq));
+                }
+            }
         }
 
         private int CalculateCellSize()

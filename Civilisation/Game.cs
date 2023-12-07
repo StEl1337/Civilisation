@@ -20,12 +20,14 @@ namespace Civilisation
         private Character character;
         private City city;
         private RouteFinder routeFinder;
+        private Image Image;
 
         public Game(Image mapImage)
         {
             map = new Map();
             character = new Character();
             city = new City();
+            Image = mapImage;
             mapDrawer = new MapDrawer(map, mapImage, character, city);
             routeFinder = new RouteFinder(map);
         }
@@ -36,6 +38,7 @@ namespace Civilisation
                 MessageBox.Show("Map size is too big");
             else
             {
+                mapDrawer = new MapDrawer(map, Image, character, city);
                 map.Generate(width, height);
                 mapDrawer.DrawMap();
             }
@@ -71,12 +74,13 @@ namespace Civilisation
         {
             try
             {
+
                 List<MapSquare> route = routeFinder.FindShortestPath(map.GetSquareAt(character.Position), map.GetSquareAt(city.Position));
                 mapDrawer.DrawRoute(route);
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Маршруту до міста не існує");
             }
         }
     }
