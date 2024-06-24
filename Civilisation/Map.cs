@@ -15,6 +15,7 @@ namespace Civilisation
 {
     public class Map
     {
+        //its me Mario
         public MapSquare[,] Squares { get; private set; }
         public int Width { get; private set; }
         public int Height { get; private set; }
